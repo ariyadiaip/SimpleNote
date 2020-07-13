@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".UpdateNote" >
+
+    <LinearLayout
+            android:id="@+id/llupdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+        <ImageView
+                android:id="@+id/backBtnUpdate"
+                android:layout_width="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+        />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Edit Note"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+        />
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llupdate"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+        <EditText
+                android:id="@+id/edtTitleEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvTitleEdit"
+                android:layout_below="@+id/tvTitleEdit" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+                android:id="@+id/tvTitleEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Title" />
+
+        <TextView
+                android:id="@+id/tvDescriptEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/edtTitleEdit"
+                android:layout_below="@+id/edtTitleEdit"
+                android:layout_marginTop="10dp"
+                android:text="Description" />
+
+        <EditText
+                android:id="@+id/edtDescEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvDescriptEdit"
+                android:layout_below="@+id/tvDescriptEdit" />
+
+        <Button
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:text="Save"
+                android:background="@drawable/button_style"
+                android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>
